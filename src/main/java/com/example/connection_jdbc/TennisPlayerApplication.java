@@ -28,6 +28,8 @@ public class TennisPlayerApplication implements CommandLineRunner {
 
         String Date1 ="02/12/1998";
 
+        dao.createTournamentTable();
+        logger.info("French Players: {}", dao.getPlayerByNationality("France"));
         logger.info("Updating Player with Id 1: {}", dao.updatePlayer(
                 new Player(4, "Thiem" , "Austria" , new SimpleDateFormat("dd/MM/yyyy").parse(Date1),17)));
 
